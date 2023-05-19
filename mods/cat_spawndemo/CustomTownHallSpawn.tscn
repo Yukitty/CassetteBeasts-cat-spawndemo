@@ -13,7 +13,7 @@
 [node name="CustomTownHallSpawn" type="Spatial"]
 
 [node name="VendingMachine1" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -8.443 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 2, -8.443 )
 
 [node name="Cutscene" type="Node" parent="VendingMachine1"]
 script = ExtResource( 1 )
