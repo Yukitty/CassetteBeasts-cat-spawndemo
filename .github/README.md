@@ -10,7 +10,7 @@ You must download and install [Mod Utils](https://github.com/Yukitty/CassetteBea
 
 ## Legal notice
 
-All original assets, scripts, and edits are released under [CC0 license](LICENSE) where applicable.
+All original mod assets, scripts, and edits are published under [CC0](LICENSE)
 
 To the extent possible under law, Yukita Mayako has waived all copyright and related or neighboring rights to Mod Utils Spawn Demo. This work is published from: United States.
 
