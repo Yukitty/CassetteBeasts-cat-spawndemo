@@ -1,0 +1,28 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://nodes/actions/Cutscene.gd" type="Script" id=1]
+[ext_resource path="res://data/exchanges/booster_packs/booster_pack_wildcard.tres" type="Resource" id=2]
+[ext_resource path="res://nodes/actions/ExchangeMenuAction.gd" type="Script" id=3]
+[ext_resource path="res://nodes/actions/ChangeMusicAction.gd" type="Script" id=4]
+[ext_resource path="res://world/objects/static_physics/ranger_props/VendingMachine1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://data/exchanges/booster_packs/booster_pack_pollution.tres" type="Resource" id=6]
+[ext_resource path="res://music/demo/merchant_theme_1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://data/exchanges/booster_packs/booster_pack_nature.tres" type="Resource" id=8]
+[ext_resource path="res://data/exchanges/booster_packs/booster_pack_elements.tres" type="Resource" id=9]
+
+[node name="CustomTownHallSpawn" type="Spatial"]
+
+[node name="VendingMachine1" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -8.443 )
+
+[node name="Cutscene" type="Node" parent="VendingMachine1"]
+script = ExtResource( 1 )
+
+[node name="ChangeMusicAction" type="Node" parent="VendingMachine1/Cutscene"]
+script = ExtResource( 4 )
+music = ExtResource( 7 )
+
+[node name="ExchangeMenuAction" type="Node" parent="VendingMachine1/Cutscene/ChangeMusicAction"]
+script = ExtResource( 3 )
+title = "RANGER_VENDING_MACHINE_NAME"
+exchanges = [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 2 ) ]
